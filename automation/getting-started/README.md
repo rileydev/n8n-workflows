@@ -1,36 +1,44 @@
-# Getting Started with n8n Workflow Canvas
+# Getting Started
 
-This workflow serves as an introduction to n8n's workflow canvas and basic automation concepts.
+This workflow sets a variable every 2 hours and stores its value in the workflow data.
 
-## Requirements
+Example: A business might use this workflow to periodically update a variable with a new value, which could be used in other parts of their workflow or shared with other systems.
 
-1. n8n instance
-2. No additional credentials required
+## What You Can Do
+- Runs a function to set variables every 2 hours
+- Stores the value of one of the variables in the workflow data
+- Can be easily integrated into larger workflows or used as a standalone task
 
-## Setup
+## Quick Start
+1. Import this workflow to n8n
+2. Configure your settings
+3. Start automating!
 
-1. Import the workflow JSON into your n8n instance
-2. No additional configuration needed
+⚠️ WARNING: Stop Building Basic Automations For Peanuts. 🚫
 
-## Usage
+Here's the painful truth most won't tell you...
 
-1. Activate the workflow
-2. The workflow demonstrates:
-   - Basic node connections
-   - Data flow between nodes
-   - Simple data manipulation
-   - Workflow execution flow
+While 90% of builders are stuck selling $500 n8n workflows (and working way too hard)...
+I'm consistently closing $6k-13k deals by doing ONE thing differently:
+I combine simple automations with custom AI that takes less than a week to build.
 
-## Learning Objectives
+Recent client wins:
+* Turned a basic invoicing headache into a $6k project that saves my client 20 hours/week
+* Built a lead generation machine for law firms - they happily paid $13k (and it runs 24/7)
+* Created AI-powered SEO automation that beats funded companies (using $0 in AI costs)
 
-- Understanding the n8n interface
-- Creating and connecting nodes
-- Passing data between nodes
-- Basic data transformation
-- Workflow execution and debugging
+Time to build each solution? Under 2 hours.
 
-## Notes
+But here's what's crazy...
+Most automation builders think AI is "too complex" or "too expensive" to add to their stack.
+(Meanwhile, I'm charging 10x more for solutions that take the same time to build)
 
-- This is a beginner-friendly workflow
-- No external services or credentials required
-- Can be used as a teaching tool for new n8n users
+Want to see exactly how I do it?
+Inside our community, I show you:
+* The exact AI components that 3x your pricing overnight
+* My "$15k Solution Stack" (n8n + AI framework)
+* Word-for-word scripts to close premium deals
+* Real examples of my $10k+ builds
+* The psychology behind why clients happily pay more
+
+Get your free trial here (closing soon): https://www.skool.com/masterclass-marketing

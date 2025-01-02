@@ -1,24 +1,44 @@
 # 663 Download A File And Upload It To An Ftp Server
 
-This workflow automates the process of 663 download a file and upload it to an ftp server.
+This workflow automates the process of downloading an image from a URL, uploading it to an FTP server, and then listing the contents of the upload directory on the FTP server.
 
-## Requirements
+Example: A user might use this workflow to regularly upload a company logo or other important image to an FTP server for easy access and distribution. The workflow can be triggered manually, allowing the user to upload the image on-demand.
 
-1. n8n instance
-2. Relevant credentials (if applicable)
+## What You Can Do
+- Automatic download of an image from a specified URL
+- Seamless upload of the downloaded image to an FTP server
+- Listing of the contents of the FTP server's upload directory for verification
 
-## Setup
+## Quick Start
+1. Import this workflow to n8n
+2. Configure your settings
+3. Start automating!
 
-1. Import the workflow JSON into your n8n instance
-2. Configure any required credentials
-3. Update the workflow nodes as needed
+⚠️ WARNING: Stop Building Basic Automations For Peanuts. 🚫
 
-## Usage
+Here's the painful truth most won't tell you...
 
-1. Activate the workflow
-2. The workflow will execute the automated process
+While 90% of builders are stuck selling $500 n8n workflows (and working way too hard)...
+I'm consistently closing $6k-13k deals by doing ONE thing differently:
+I combine simple automations with custom AI that takes less than a week to build.
 
-## Notes
+Recent client wins:
+* Turned a basic invoicing headache into a $6k project that saves my client 20 hours/week
+* Built a lead generation machine for law firms - they happily paid $13k (and it runs 24/7)
+* Created AI-powered SEO automation that beats funded companies (using $0 in AI costs)
 
-- Review and test the workflow before production use
-- Modify as needed for your specific use case
+Time to build each solution? Under 2 hours.
+
+But here's what's crazy...
+Most automation builders think AI is "too complex" or "too expensive" to add to their stack.
+(Meanwhile, I'm charging 10x more for solutions that take the same time to build)
+
+Want to see exactly how I do it?
+Inside our community, I show you:
+* The exact AI components that 3x your pricing overnight
+* My "$15k Solution Stack" (n8n + AI framework)
+* Word-for-word scripts to close premium deals
+* Real examples of my $10k+ builds
+* The psychology behind why clients happily pay more
+
+Get your free trial here (closing soon): https://www.skool.com/masterclass-marketing
