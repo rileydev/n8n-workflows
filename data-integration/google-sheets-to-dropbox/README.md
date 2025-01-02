@@ -1,53 +1,41 @@
-# Google Sheets to Dropbox Sync
+# Google Sheets to Dropbox Data Integration
 
-This workflow automatically syncs data from a Google Sheet to Dropbox by converting it to an Excel file and uploading it every 15 minutes.
-
-## Overview
-
-The workflow performs the following steps:
-1. Triggers every 15 minutes
-2. Reads data from a specified Google Sheet
-3. Converts the data to an Excel (.xls) file
-4. Uploads the file to a specified Dropbox path
+This workflow automates the process of exporting data from Google Sheets to Dropbox.
 
 ## Requirements
 
-- n8n instance with:
-  - Google Sheets API credentials configured
-  - Dropbox API credentials configured
-- Access to the source Google Sheet
-- Dropbox account with write permissions
+1. n8n instance
+2. Google Sheets API credentials
+3. Dropbox API credentials
+4. Google Sheet with data to export
 
 ## Setup
 
 1. Import the workflow JSON into your n8n instance
-2. Configure the required credentials:
-   - Google Sheets API credentials
-   - Dropbox API credentials
-3. Update the following parameters:
-   - `Read Sheet` node: Set the correct Google Sheet ID
-   - `Upload Dropbox` node: Update the path where files should be saved
-4. Adjust the interval timing if needed (default: 15 minutes)
+2. Configure the following credentials:
+   - Google Sheets: Set up OAuth2 credentials
+   - Dropbox: Set up OAuth2 credentials
+3. Update the workflow nodes:
+   - Google Sheets: Specify the spreadsheet ID and range
+   - Dropbox: Configure the target file path and format
 
 ## Usage
 
-1. Ensure the Google Sheet is accessible with the configured credentials
+1. Ensure your Google Sheet is accessible to the API
 2. Activate the workflow
-3. The workflow will automatically:
-   - Read the latest data from Google Sheets
-   - Convert it to Excel format
-   - Upload it to Dropbox at the specified interval
+3. The workflow will:
+   - Read data from the specified Google Sheet
+   - Convert the data to the desired format
+   - Upload the file to Dropbox
 
 ## Example Use Cases
 
-- Automated backup of Google Sheets data
-- Sharing Google Sheets data with Dropbox users
-- Creating Excel snapshots of Google Sheets data
-- Maintaining Excel copies of Google Sheets reports
+- Automating regular data backups
+- Sharing spreadsheet data with team members
+- Migrating data between cloud services
 
-## Additional Notes
+## Notes
 
-- The workflow runs every 15 minutes by default
-- Files are saved in .xls format
-- Previous versions in Dropbox will be overwritten
-- Consider Dropbox storage limits and API rate limits
+- The workflow supports multiple file formats (CSV, JSON, etc.)
+- Can be scheduled to run automatically
+- Includes error handling for API rate limits
