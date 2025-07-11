@@ -1,0 +1,32 @@
+name: Trigger GitLab CI/CD
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  trigger-gitlab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger GitLab Pipeline
+        run: |
+          curl -X POST \
+            -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} \
+            -F ref=${{ github.ref_name }} \
+            -F "variables[GITHUB_SHA]=${{ github.sha }}" \
+            -F "variables[GITHUB_REF]=${{ github.ref }}" \
+            -F "variables[GITHUB_ACTOR]=${{ github.actor }}" \
+            https://gitlab.com/api/v4/projects/71325268/trigger/pipeline
+      
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🚀 GitLab CI/CD pipeline triggered! Check progress at https://gitlab.com/housingtechadvisors-group/n8n-workflows/-/pipelines'
+            })
